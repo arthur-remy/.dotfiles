@@ -1,0 +1,10 @@
+configuration {
+	theme: "~/.config/rofi/horizontal-matcha-dark-azul-theme.rasi";
+	show-icons: true;
+	kb-cancel: "Escape,Alt+F1";
+	kb-row-up: "Left,Up,Control+p,ISO_Left_Tab";
+	kb-row-down: "Right,Down,Control+n";
+	kb-move-char-back: "Alt+Left,Control+b";
+	kb-move-char-forward: "Alt+Right,Control+f";
+	display: "primary";
+}

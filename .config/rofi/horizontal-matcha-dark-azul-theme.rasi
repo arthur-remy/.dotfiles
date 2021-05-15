@@ -1,0 +1,58 @@
+/**
+ * ROFI Color theme
+ * NAME: horizontal-matcha-dark-azul-theme.rasi
+ * DESCRIPTION: Horizontal dmenu-like theme with color inspired from matcha-dark-azul.
+ * AUTHOR: Arthur Remy
+ */
+
+* {
+    height: 26px;
+    background-color: #1B1D24;
+    border-color: #1B1D24;
+    text-color: #AFB4BA;
+    font: "Noto Sans Regular 10";
+    prompt-background: #1B1D24;
+    prompt-foreground: #2EB398;
+    selected-normal-background: #3498db;
+    selected-normal-foreground: #22252C;
+}
+
+#window {
+    anchor: north;
+    location: north;
+    width: 100%;
+    padding: 0px;
+    children: [ horibox ];
+}
+
+#horibox {
+    orientation: horizontal;
+    children: [ prompt, entry, listview ];
+}
+
+#prompt {
+    padding: 2px 4px 2px 8px;
+    background-color: @prompt-background;
+    text-color: @prompt-foreground;
+    font: @prompt-font;
+}
+
+#listview {
+    layout: horizontal;
+    lines: 100;
+}
+
+#entry {
+    padding: 2px;
+    expand: false;
+    width: 10em;
+}
+
+#element {
+    padding: 2px 8px;
+}
+
+#element selected {
+    background-color: @selected-normal-background;
+    text-color: @selected-normal-foreground;
+}
