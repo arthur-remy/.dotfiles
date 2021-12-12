@@ -1,6 +1,5 @@
 configuration {
 
-	theme: "~/.config/rofi/horizontal-arc-dark-theme.rasi";
 	show-icons: true;
 	kb-cancel: "Escape,Alt+F1";
 	kb-row-up: "Left,Up,Control+p,ISO_Left_Tab";
@@ -10,3 +9,5 @@ configuration {
 	display: "primary";
 
 }
+
+@theme "~/.config/rofi/horizontal-arc-dark-theme.rasi"
