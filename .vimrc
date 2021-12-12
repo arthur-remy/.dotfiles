@@ -11,6 +11,7 @@ set list
 """ Shortcuts
 
 let mapleader = " "
+
 " Open file explorer
 nmap <leader>f :Ex<CR>
 nmap <leader>w :w!<CR>
@@ -21,7 +22,6 @@ map <leader>y "+y
 map <leader>p "+p
 " Remove search highlighting
 map <leader><Esc> :noh<CR>
-
 map <leader>s <C-w>s
 map <leader>v <C-w>v
 map <leader>c <C-w>c
@@ -31,14 +31,13 @@ map <leader>h <C-w>h
 map <leader>l <C-w>l
 map <leader>j <C-w>j
 map <leader>k <C-w>k
-
 " sudo write
 command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
 
 
 """ Abbreviations
 
-iab --> 🠆
+iab -> 🠆
 
 
 """ Search
@@ -57,8 +56,9 @@ highlight SpecialKey ctermfg=grey
 highlight Comment cterm=italic
 highlight clear VertSplit
 
-" add markdown syntax highlighting by default for .md and .txt files
+" add markdown syntax highlighting by default for .md and .txt and new files
 autocmd BufNewFile,BufFilePre,BufRead *.md,*.txt set filetype=markdown
+autocmd BufEnter,BufNewFile,BufRead * if &ft == '' | set ft=markdown | endif
 
 " change markdown highlighting
 highlight markdownH1 cterm=bold ctermfg=135
@@ -93,4 +93,3 @@ Plug 'xolox/vim-misc'
 Plug 'xolox/vim-notes' 
 Plug 'guns/xterm-color-table.vim'
 call plug#end()
-
