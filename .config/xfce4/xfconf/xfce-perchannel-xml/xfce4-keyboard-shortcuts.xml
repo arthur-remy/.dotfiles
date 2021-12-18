@@ -16,6 +16,7 @@
       <property name="<Super>l" type="string" value="systemctl suspend"/>
       <property name="<Super>p" type="string" value="xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/presentation-mode -T"/>
       <property name="<Super>b" type="string" value="firefox"/>
+      <property name="<Super><Shift>l" type="string" value="xfce4-session-logout"/>
       <property name="override" type="bool" value="true"/>
     </property>
   </property>
