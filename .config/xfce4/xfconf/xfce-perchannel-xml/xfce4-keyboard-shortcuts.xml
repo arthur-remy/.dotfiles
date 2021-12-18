@@ -3,45 +3,45 @@
 <channel name="xfce4-keyboard-shortcuts" version="1.0">
   <property name="commands" type="empty">
     <property name="custom" type="empty">
-      <property name="&lt;Primary&gt;&lt;Alt&gt;p" type="string" value="xfce4-display-settings --minimal"/>
-      <property name="&lt;Primary&gt;&lt;Alt&gt;x" type="string" value="xkill"/>
+      <property name="<Primary><Alt>p" type="string" value="xfce4-display-settings --minimal"/>
+      <property name="<Primary><Alt>x" type="string" value="xkill"/>
       <property name="Print" type="string" value="xfce4-screenshooter -fd 1"/>
-      <property name="&lt;Super&gt;f" type="string" value="thunar"/>
-      <property name="&lt;Super&gt;space" type="string" value="rofi -show run"/>
-      <property name="&lt;Alt&gt;F1" type="string" value="rofi -show drun"/>
-      <property name="&lt;Shift&gt;&lt;Super&gt;Up" type="string" value="/home/arthur/.dotfiles/movescreen.py -r up"/>
-      <property name="&lt;Super&gt;Return" type="string" value="gnome-terminal"/>
-      <property name="&lt;Super&gt;Alt_L" type="string" value="rofi -show window -selected-row 1 -config /home/arthur/.config/rofi/alt-tab-window-cycling.rasi"/>
-      <property name="&lt;Shift&gt;&lt;Super&gt;Down" type="string" value="/home/arthur/.dotfiles/movescreen.py -r down"/>
-      <property name="&lt;Super&gt;l" type="string" value="systemctl suspend"/>
-      <property name="&lt;Super&gt;p" type="string" value="xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/presentation-mode -T"/>
-      <property name="&lt;Super&gt;b" type="string" value="firefox"/>
+      <property name="<Super>f" type="string" value="thunar"/>
+      <property name="<Super>space" type="string" value="rofi -show run"/>
+      <property name="<Alt>F1" type="string" value="rofi -show drun"/>
+      <property name="<Shift><Super>Up" type="string" value="/home/arthur/.dotfiles/movescreen.py -r up"/>
+      <property name="<Super>Return" type="string" value="gnome-terminal"/>
+      <property name="<Super>Alt_L" type="string" value="rofi -show window -selected-row 1 -config /home/arthur/.config/rofi/alt-tab-window-cycling.rasi"/>
+      <property name="<Shift><Super>Down" type="string" value="/home/arthur/.dotfiles/movescreen.py -r down"/>
+      <property name="<Super>l" type="string" value="systemctl suspend"/>
+      <property name="<Super>p" type="string" value="xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/presentation-mode -T"/>
+      <property name="<Super>b" type="string" value="firefox"/>
       <property name="override" type="bool" value="true"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">
     <property name="custom" type="empty">
       <property name="Escape" type="string" value="cancel_key"/>
-      <property name="&lt;Alt&gt;space" type="string" value="popup_menu_key"/>
-      <property name="&lt;Control&gt;&lt;Shift&gt;&lt;Alt&gt;Up" type="string" value="move_window_up_key"/>
-      <property name="&lt;Control&gt;&lt;Shift&gt;&lt;Alt&gt;Left" type="string" value="move_window_left_key"/>
+      <property name="<Alt>space" type="string" value="popup_menu_key"/>
+      <property name="<Control><Shift><Alt>Up" type="string" value="move_window_up_key"/>
+      <property name="<Control><Shift><Alt>Left" type="string" value="move_window_left_key"/>
       <property name="Left" type="string" value="left_key"/>
       <property name="Down" type="string" value="down_key"/>
-      <property name="&lt;Control&gt;&lt;Shift&gt;&lt;Alt&gt;Right" type="string" value="move_window_right_key"/>
+      <property name="<Control><Shift><Alt>Right" type="string" value="move_window_right_key"/>
       <property name="Right" type="string" value="right_key"/>
-      <property name="&lt;Super&gt;Tab" type="string" value="switch_window_key"/>
+      <property name="<Super>Tab" type="string" value="switch_window_key"/>
       <property name="Up" type="string" value="up_key"/>
-      <property name="&lt;Super&gt;Shift_R" type="string" value="maximize_window_key"/>
-      <property name="&lt;Super&gt;Left" type="string" value="tile_left_key"/>
-      <property name="&lt;Super&gt;Right" type="string" value="tile_right_key"/>
-      <property name="&lt;Super&gt;d" type="string" value="show_desktop_key"/>
-      <property name="&lt;Super&gt;m" type="string" value="hide_window_key"/>
-      <property name="&lt;Super&gt;exclam" type="string" value="close_window_key"/>
-      <property name="&lt;Alt&gt;Tab" type="string" value="cycle_windows_key"/>
-      <property name="&lt;Super&gt;Up" type="string" value="tile_up_key"/>
-      <property name="&lt;Super&gt;Down" type="string" value="tile_down_key"/>
-      <property name="&lt;Shift&gt;asciitilde" type="string" value="resize_window_key"/>
-      <property name="&lt;Super&gt;twosuperior" type="string" value="move_window_key"/>
+      <property name="<Super>Shift_R" type="string" value="maximize_window_key"/>
+      <property name="<Super>Left" type="string" value="tile_left_key"/>
+      <property name="<Super>Right" type="string" value="tile_right_key"/>
+      <property name="<Super>d" type="string" value="show_desktop_key"/>
+      <property name="<Super>m" type="string" value="hide_window_key"/>
+      <property name="<Super>exclam" type="string" value="close_window_key"/>
+      <property name="<Alt>Tab" type="string" value="cycle_windows_key"/>
+      <property name="<Super>Up" type="string" value="tile_up_key"/>
+      <property name="<Super>Down" type="string" value="tile_down_key"/>
+      <property name="<Shift>asciitilde" type="string" value="resize_window_key"/>
+      <property name="<Super>twosuperior" type="string" value="move_window_key"/>
       <property name="override" type="bool" value="true"/>
     </property>
   </property>
