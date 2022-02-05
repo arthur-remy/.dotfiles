@@ -14,6 +14,6 @@
   <property name="do-fadeout" type="bool" value="true"/>
   <property name="expire-timeout" type="int" value="3"/>
   <property name="notification-log" type="bool" value="true"/>
-  <property name="log-max-size" type="uint" value="10"/>
+  <property name="log-max-size" type="uint" value="5"/>
   <property name="initial-opacity" type="double" value="1.000000"/>
 </channel>
