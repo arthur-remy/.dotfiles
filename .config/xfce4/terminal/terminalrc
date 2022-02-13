@@ -16,7 +16,7 @@ ScrollingLines=999999
 BackgroundDarkness=1,000000
 MiscSearchDialogOpacity=100
 
-FontUseSystem=TRUE
+FontName=Source Code Pro Medium 10
 
 ColorCursor=#d8d8dedee9e9
 ColorForeground=#d8d8dedee9e9
