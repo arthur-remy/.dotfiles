@@ -8,7 +8,7 @@ MiscDefaultGeometry=120x40
 MiscCursorBlinks=TRUE
 MiscCursorShape=TERMINAL_CURSOR_SHAPE_UNDERLINE
 
-MiscConfirmClose=TRUE
+MiscConfirmClose=FALSE
 
 ScrollingBar=TERMINAL_SCROLLBAR_NONE
 ScrollingLines=999999
