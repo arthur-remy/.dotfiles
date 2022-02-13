@@ -10,7 +10,7 @@
       <property name="<Super>space" type="string" value="rofi -show run"/>
       <property name="<Alt>F1" type="string" value="rofi -show drun"/>
       <property name="<Shift><Super>Up" type="string" value="/home/arthur/.dotfiles/movescreen.py -r up"/>
-      <property name="<Super>Return" type="string" value="gnome-terminal"/>
+      <property name="<Super>Return" type="string" value="xfce4-terminal"/>
       <property name="<Super>Alt_L" type="string" value="rofi -show window -selected-row 1 -config /home/arthur/.config/rofi/alt-tab-window-cycling.rasi"/>
       <property name="<Shift><Super>Down" type="string" value="/home/arthur/.dotfiles/movescreen.py -r down"/>
       <property name="<Super>l" type="string" value="systemctl suspend"/>
