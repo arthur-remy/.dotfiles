@@ -8,6 +8,7 @@ set number  " show line numbers in the left of the window
 " set list  " show hidden charactes as defined by the listchars variable
 set listchars=eol:↩,tab:→\ ,space:·
 set conceallevel=2  " hide special character in md files
+set laststatus=2  " always show status line
 
 
 """ SHORTCUTS
@@ -76,6 +77,8 @@ highlight GitGutterChange guifg=#bbbb00 ctermfg=3
 highlight GitGutterDelete guifg=#ff2222 ctermfg=1
 highlight! link SignColumn LineNr
 
+" lightline theme
+let g:lightline = {'colorscheme': 'wombat'}
 
 """ PERFORMANCE
 
@@ -94,5 +97,6 @@ set shiftround  " round shift value when there is already spaces
 call plug#begin('~/.vim/plugged')
 Plug 'ap/vim-css-color'
 Plug 'vim-scripts/vim-gitgutter'
+Plug 'itchyny/lightline.vim'
 call plug#end()
 
