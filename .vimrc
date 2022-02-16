@@ -1,46 +1,37 @@
 """ GENERAL
 
-set history=500
-set autoread " auto update the file when change by another software
-set wildmenu
-set ruler
-set number
-set list
+set shell=/bin/bash  " required for GitGutter to work properly
+set autoread  " auto update the file when change by another software
+set wildmenu  " helper autocomplete popup for command
+set ruler  " show cursor position (line & column number) in the status bar
+set number  " show line numbers in the left of the window
+" set list  " show hidden charactes as defined by the listchars variable
+set listchars=eol:↩,tab:→\ ,space:·
+set conceallevel=2  " hide special character in md files
 
 
 """ SHORTCUTS
 
 let mapleader = " "
 
-" Open file explorer
-nmap <leader>f :Ex<CR>
-nmap <leader>w :w!<CR>
-
-" Toggle show tab character
-nmap <leader>l :set list!<CR>
-
-" Yank and paste form clipboard
-map <leader>y "+y
-map <leader>p "+p
-
-" Remove search highlighting
-map <leader><Esc> :noh<CR>
-map <leader>s <C-w>s
-map <leader>v <C-w>v
-map <leader>c <C-w>c
-map <leader><Tab> :bn<CR>
+nmap <leader>f :Ex<CR>  " open file explorer
+nmap <leader>w :w!<CR>  " write file
+nmap <leader>* :set list!<CR>  " toggle hidden characters
+map <leader>y "+y  " yank form clipboard
+map <leader>p "+p  " paste form clipboard
+map <leader><Esc> :noh<CR>  " remove search highlighting
+map <leader>s <C-w>s  " open horizontal split
+map <leader>v <C-w>v  " open vertical split
+map <leader>c <C-w>c  " close window
+map <leader><Tab> :bn<CR>  " go to next buffer
+nnoremap <leader>r :!%:p<CR>  " execute current file
+command! W execute 'w !sudo tee % > /dev/null' <bar> edit!  " sudo write
 
 " Navigation between windows
 map <leader>h <C-w>h
 map <leader>l <C-w>l
 map <leader>j <C-w>j
 map <leader>k <C-w>k
-
-" Execute current file
-nnoremap <leader>r :!%:p<CR>
-
-" sudo write
-command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
 
 
 """ ABBREVIATIONS
@@ -50,10 +41,10 @@ iab -> 🠆
 
 """ SEARCH
 
-set ignorecase
-set smartcase
-set hlsearch " Highlight search results
-set incsearch " Show partial match
+set ignorecase  " case insensitive search
+set smartcase  " search is case sensitive if a upper case is used
+set hlsearch  " Highlight search results
+set incsearch  " Show partial match
 
 
 """ THEME
@@ -74,7 +65,8 @@ highlight markdownH2Delimiter cterm=bold ctermfg=141
 highlight markdownH3Delimiter cterm=bold ctermfg=147
 highlight markdownH4Delimiter cterm=bold ctermfg=153
 
-" gitgutter plugin
+
+" gitgutter plugin theme
 set updatetime=100
 let g:gitgutter_sign_added = '+'
 let g:gitgutter_sign_modified = '~'
@@ -87,25 +79,20 @@ highlight! link SignColumn LineNr
 
 """ PERFORMANCE
 
-set lazyredraw " Don't updatescreen during macro execution 
+set lazyredraw  " Don't updatescreen during macro execution
 
 
 """ TABS
 
-set smarttab
-set shiftwidth=4
-set tabstop=4
-set shiftround
-set listchars=tab:>\ 
+set tabstop=4  " tab = 4 spaces
+set shiftwidth=4  " 1 identation level = 4 spaces
+set shiftround  " round shift value when there is already spaces
 
 
 """ PLUGINS
 
 call plug#begin('~/.vim/plugged')
 Plug 'ap/vim-css-color'
-Plug 'xolox/vim-misc'
-Plug 'xolox/vim-notes' 
-Plug 'guns/xterm-color-table.vim'
 Plug 'vim-scripts/vim-gitgutter'
 call plug#end()
 
