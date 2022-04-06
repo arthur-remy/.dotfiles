@@ -1,3 +1,5 @@
+#!/usr/bin/bash
+
 xcape -e 'Super_L=Alt_L|F1'
 setxkbmap fr
 xbacklight -set 50
