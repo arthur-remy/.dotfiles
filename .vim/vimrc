@@ -1,28 +1,45 @@
+""" ENVIRONMENT
+
+set directory=$HOME/.cache/vim
+set backupdir=$HOME/.cache/vim
+set undodir=$HOME/.cache/vim
+set viminfo+=n$HOME/.cache/vim/viminfo
+
+
 """ GENERAL
 
 set shell=/bin/bash  " required for GitGutter to work properly
 set autoread  " auto update the file when change by another software
-set wildmenu  " helper autocomplete popup for command
+set wildmenu  " helper auto complete pop-up for command
 set ruler  " show cursor position (line & column number) in the status bar
 set number  " show line numbers in the left of the window
-" set list  " show hidden charactes as defined by the listchars variable
+" set list  " show hidden characters as defined by the listchars variable
 set listchars=eol:↩,tab:→\ ,space:·
-set conceallevel=2  " hide special character in md files
+set conceallevel=2  " hide special characters in .md files
 set laststatus=2  " always show status line
+set background=dark  " prevent color scheme changes in tmux
+set spell spelllang=en_us,fr
+set splitbelow
+set splitright
+set backup
+set undofile
 
 
 """ SHORTCUTS
 
+imap jj <Esc>  " faster switch to normal mode 
+
 let mapleader = " "
 
-nmap <leader>f :Ex<CR>  " open file explorer
+nmap <leader>f :Vexplore!<CR>  " open file explorer
 nmap <leader>w :w!<CR>  " write file
 nmap <leader>* :set list!<CR>  " toggle hidden characters
+nmap <leader>n :set relativenumber!<CR>  " toggle relative line numbering
 map <leader>y "+y  " yank form clipboard
 map <leader>p "+p  " paste form clipboard
 map <leader><Esc> :noh<CR>  " remove search highlighting
-map <leader>s <C-w>s  " open horizontal split
-map <leader>v <C-w>v  " open vertical split
+map <C-j> <C-w>s  " open horizontal split
+map <C-l> <C-w>v  " open vertical split
 map <leader>c <C-w>c  " close window
 map <leader><Tab> :bn<CR>  " go to next buffer
 nnoremap <leader>r :!%:p<CR>  " execute current file
@@ -37,7 +54,11 @@ map <leader>k <C-w>k
 
 """ ABBREVIATIONS
 
+" UTF-8 0xF1804 🠆 0xF1807
+iab <- 🠄
+iab <\| 🠅
 iab -> 🠆
+iab \|> 🠇
 
 
 """ SEARCH
@@ -55,6 +76,7 @@ highlight NonText ctermfg=grey
 highlight SpecialKey ctermfg=grey
 highlight Comment cterm=italic
 highlight clear VertSplit
+set fillchars+=vert:│  " solid vertical split line
 
 " change markdown highlighting
 highlight markdownH1 cterm=bold ctermfg=135
@@ -66,8 +88,7 @@ highlight markdownH2Delimiter cterm=bold ctermfg=141
 highlight markdownH3Delimiter cterm=bold ctermfg=147
 highlight markdownH4Delimiter cterm=bold ctermfg=153
 
-
-" gitgutter plugin theme
+" GitGutter plugin theme
 set updatetime=100
 let g:gitgutter_sign_added = '+'
 let g:gitgutter_sign_modified = '~'
@@ -77,18 +98,23 @@ highlight GitGutterChange guifg=#bbbb00 ctermfg=3
 highlight GitGutterDelete guifg=#ff2222 ctermfg=1
 highlight! link SignColumn LineNr
 
+" spell check styling
+highlight clear SpellBad
+highlight SpellBad cterm=underline ctermfg=red
+
 " lightline theme
 let g:lightline = {'colorscheme': 'wombat'}
 
+
 """ PERFORMANCE
 
-set lazyredraw  " Don't updatescreen during macro execution
+set lazyredraw  " Don't update screen during macro execution
 
 
-""" TABS
+""" TABULATION
 
 set tabstop=4  " tab = 4 spaces
-set shiftwidth=4  " 1 identation level = 4 spaces
+set shiftwidth=4  " 1 indentation level = 4 spaces
 set shiftround  " round shift value when there is already spaces
 
 
@@ -99,4 +125,6 @@ Plug 'ap/vim-css-color'
 Plug 'vim-scripts/vim-gitgutter'
 Plug 'itchyny/lightline.vim'
 call plug#end()
+
+let g:gitgutter_map_keys = 0  " disable GitGutter mappings to avoid conflicts with navigation key bindings
 
