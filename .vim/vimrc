@@ -1,130 +1,64 @@
 """ ENVIRONMENT
-
-set directory=$HOME/.cache/vim
-set backupdir=$HOME/.cache/vim
-set undodir=$HOME/.cache/vim
+set directory=$HOME/.cache/vim/swap
+set backupdir=$HOME/.cache/vim/backup
+set undodir=$HOME/.cache/vim/undo
 set viminfo+=n$HOME/.cache/vim/viminfo
 
-
 """ GENERAL
-
-set shell=/bin/bash  " required for GitGutter to work properly
-set autoread  " auto update the file when change by another software
-set wildmenu  " helper auto complete pop-up for command
-set ruler  " show cursor position (line & column number) in the status bar
-set number  " show line numbers in the left of the window
-" set list  " show hidden characters as defined by the listchars variable
-set listchars=eol:↩,tab:→\ ,space:·
-set conceallevel=2  " hide special characters in .md files
-set laststatus=2  " always show status line
-set background=dark  " prevent color scheme changes in tmux
+set nocompatible
+set shell=/bin/bash							" required for GitGutter to work properly
+set autoread								" auto update the file when change by another software
+set wildmenu								" helper auto complete pop-up for command
+set ruler									" show cursor position (line & column number) in the status bar
+set number									" show line numbers in the left of the window
+set conceallevel=2							" hide special characters in .md files
+set laststatus=2							" always show status line
+set background=dark							" prevent color scheme changes in tmux
 set spell spelllang=en_us,fr
 set splitbelow
 set splitright
 set backup
 set undofile
+set path=**
+set sessionoptions=curdir,folds
+set listchars=eol:↩,tab:→\ ,space:·
+set breakindent								" keep tabulation level when wrapping a line
+set linebreak								" don't wrap line in the middle of a word
+set cursorline								" highlight active line
+set mouse=a									" enable mouse support
+set noshowmode								" don't show mode in the last line (already in LightLine)
+set scrolloff=4								" keep at least 4 visible lines above/below the active line
+set termguicolors
+set ignorecase								" case insensitive search
+set smartcase								" search is case sensitive if a upper case is used
+set hlsearch								" Highlight search results
+set incsearch								" Show partial match
+set lazyredraw								" Don't update screen during macro execution
+set tabstop=4								" tab = 4 spaces
+set shiftwidth=4							" 1 indentation level = 4 spaces
+set shiftround								" round shift value when there is already spaces
+
+" " Automatically load and save fold text inside a file
+" /!\ Error message when opening non-writable files
+" autocmd BufWinLeave *.* mkview 
+" autocmd BufWinEnter *.* silent loadview  
 
 
-""" SHORTCUTS
+source $HOME/.vim/configs/plugins.vim
+source $HOME/.vim/configs/keymaps.vim
+source $HOME/.vim/configs/theme.vim
+source $HOME/.vim/configs/abbreviations.vim
+source $HOME/.vim/configs/custom-commands.vim
+source $HOME/.vim/configs/custom-functions.vim
 
-imap jj <Esc>  " faster switch to normal mode 
-
-let mapleader = " "
-
-nmap <leader>f :Vexplore!<CR>  " open file explorer
-nmap <leader>w :w!<CR>  " write file
-nmap <leader>* :set list!<CR>  " toggle hidden characters
-nmap <leader>n :set relativenumber!<CR>  " toggle relative line numbering
-map <leader>y "+y  " yank form clipboard
-map <leader>p "+p  " paste form clipboard
-map <leader><Esc> :noh<CR>  " remove search highlighting
-map <C-j> <C-w>s  " open horizontal split
-map <C-l> <C-w>v  " open vertical split
-map <leader>c <C-w>c  " close window
-map <leader><Tab> :bn<CR>  " go to next buffer
-nnoremap <leader>r :!%:p<CR>  " execute current file
-command! W execute 'w !sudo tee % > /dev/null' <bar> edit!  " sudo write
-
-" Navigation between windows
-map <leader>h <C-w>h
-map <leader>l <C-w>l
-map <leader>j <C-w>j
-map <leader>k <C-w>k
-
-
-""" ABBREVIATIONS
-
-" UTF-8 0xF1804 🠆 0xF1807
-iab <- 🠄
-iab <\| 🠅
-iab -> 🠆
-iab \|> 🠇
-
-
-""" SEARCH
-
-set ignorecase  " case insensitive search
-set smartcase  " search is case sensitive if a upper case is used
-set hlsearch  " Highlight search results
-set incsearch  " Show partial match
-
-
-""" THEME
-
-highlight LineNr ctermfg=grey
-highlight NonText ctermfg=grey
-highlight SpecialKey ctermfg=grey
-highlight Comment cterm=italic
-highlight clear VertSplit
-set fillchars+=vert:│  " solid vertical split line
-
-" change markdown highlighting
-highlight markdownH1 cterm=bold ctermfg=135
-highlight markdownH2 cterm=bold ctermfg=141
-highlight markdownH3 cterm=bold ctermfg=147
-highlight markdownH4 cterm=bold ctermfg=153
-highlight markdownH1Delimiter cterm=bold ctermfg=135
-highlight markdownH2Delimiter cterm=bold ctermfg=141
-highlight markdownH3Delimiter cterm=bold ctermfg=147
-highlight markdownH4Delimiter cterm=bold ctermfg=153
-
-" GitGutter plugin theme
-set updatetime=100
-let g:gitgutter_sign_added = '+'
-let g:gitgutter_sign_modified = '~'
-let g:gitgutter_sign_removed = '-'
-highlight GitGutterAdd    guifg=#009900 ctermfg=2
-highlight GitGutterChange guifg=#bbbb00 ctermfg=3
-highlight GitGutterDelete guifg=#ff2222 ctermfg=1
-highlight! link SignColumn LineNr
-
-" spell check styling
-highlight clear SpellBad
-highlight SpellBad cterm=underline ctermfg=red
-
-" lightline theme
-let g:lightline = {'colorscheme': 'wombat'}
-
-
-""" PERFORMANCE
-
-set lazyredraw  " Don't update screen during macro execution
-
-
-""" TABULATION
-
-set tabstop=4  " tab = 4 spaces
-set shiftwidth=4  " 1 indentation level = 4 spaces
-set shiftround  " round shift value when there is already spaces
-
-
-""" PLUGINS
-
-call plug#begin('~/.vim/plugged')
-Plug 'ap/vim-css-color'
-Plug 'vim-scripts/vim-gitgutter'
-Plug 'itchyny/lightline.vim'
-call plug#end()
-
-let g:gitgutter_map_keys = 0  " disable GitGutter mappings to avoid conflicts with navigation key bindings
+augroup reloadConfig
+	autocmd!
+	autocmd BufWritePost vimrc source <afile>
+	autocmd BufWritePost plugins.vim source <afile> | PlugInstall
+	autocmd BufWritePost keymaps.vim source <afile>
+	autocmd BufWritePost theme.vim source <afile>
+	autocmd BufWritePost abbreviations.vim source <afile>
+	autocmd BufWritePost custom-commands.vim source <afile>
+	autocmd BufWritePost custom-functions.vim source <afile>
+augroup end
 
