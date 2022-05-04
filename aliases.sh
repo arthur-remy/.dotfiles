@@ -1,6 +1,5 @@
 ### INSTRUCTION TO BE IMPORTED IN BASHRC AND SIMILAR WITH SOURCE CMD
 
-alias e='nvim'
 
 # CHANGE DEFAULT BEHAVIOR OF DEFAULT CMD
 
@@ -15,7 +14,7 @@ export EDITOR=nvim
 
 # CUSTOM COMMANDS
 
-alias sshpi='ssh pi@pi.local'
-alias helpcmd='vim $HOME/.dotfiles/frequent_cmd.txt'
+alias e='nvim'
+alias helpcmd='nvim $HOME/.dotfiles/frequent_cmd.txt'
 alias todo='nvim $HOME/Documents/Notes/todo.md'
 
