@@ -26,7 +26,7 @@
     padding: 2px 4px 2px 8px;
     background-color: @background-color;
     text-color: @prompt-text-color;
-    font: @prompt-font;
+    font: "Hack Nerd Font Regular 12";
 }
 
 #listview {
@@ -37,7 +37,7 @@
 #entry {
     padding: 2px;
     expand: false;
-    width: 10em;
+    width: 5em;
 }
 
 #element {

@@ -1,13 +1,25 @@
 configuration {
 
 	show-icons: true;
+	drun-display-format: "{name}";
+	window-format: "{t:25}";
+	combi-display-format: "{text}";
 	kb-cancel: "Escape,Alt+F1";
-	kb-row-up: "Left,Up,Control+p,ISO_Left_Tab";
-	kb-row-down: "Right,Down,Control+n";
+	kb-row-up: "Left,Up,Control+h,Control+k,Control+p,ISO_Left_Tab";
+	kb-row-down: "Right,Down,Control+l,Control+j,Control+n";
 	kb-move-char-back: "Alt+Left,Control+b";
 	kb-move-char-forward: "Alt+Right,Control+f";
 	display: "primary";
 
+	/* Changed to avoid conflict with Ctrl+h,j,k,l */
+	kb-remove-char-back: "BackSpace,Shift+BackSpace";
+	kb-mode-complete: "";
+	kb-accept-entry: "Return"; 
+	kb-remove-to-eol: "";
+
+	display-combi: "";
+	display-run: "";
 }
 
 @theme "~/.config/rofi/horizontal-arc-dark-theme.rasi"
+

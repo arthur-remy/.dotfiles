@@ -58,7 +58,7 @@
 
 ### ROFI ###
 
-"rofi -show drun"
+"rofi -show combi -combi-modi "window,drun" -modi combi"
 	Alt+Mod2 + F1
 	# The super key is mapped to Alt+F1 (xcape) in .xprofile
 
