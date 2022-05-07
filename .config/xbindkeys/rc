@@ -46,6 +46,9 @@
 "xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/presentation-mode -T"
 	Mod2+Mod4 + p
 
+"$HOME/.dotfiles/scripts/toggle-bluetooth.sh"
+	Control+Shift+Mod2 + b
+
 
 ### WINDOW MANAGEMENT ###
 
@@ -88,4 +91,7 @@
 
 "gnome-screenshot -i"
 	Mod2 + Print
+
+"mailspring & slack & firefox &"
+    Control+Alt+Mod2 + w
 
