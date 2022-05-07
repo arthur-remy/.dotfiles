@@ -1,6 +1,7 @@
 #!/usr/bin/bash
 
 xcape -e 'Super_L=Alt_L|F1'
+xbindkeys -f $HOME/.config/xbindkeys/rc
 setxkbmap fr
 xbacklight -set 50
 

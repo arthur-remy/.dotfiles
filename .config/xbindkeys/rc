@@ -1,0 +1,88 @@
+# For the benefit of emacs users: -*- shell-script -*-
+###########################
+# xbindkeys configuration #
+###########################
+#
+# Version: 1.8.7
+#
+# If you edit this file, do not forget to uncomment any lines
+# that you change.
+# The pound(#) symbol may be used anywhere for comments.
+#
+# To specify a key, you can use 'xbindkeys --key' or
+# 'xbindkeys --multikey' and put one of the two lines in this file.
+#
+# The format of a command line is:
+#    "command to start"
+#       associated key
+#
+#
+# A list of keys is in /usr/include/X11/keysym.h and in
+# /usr/include/X11/keysymdef.h
+# The XK_ is not needed.
+#
+# List of modifier:
+#   Release, Control, Shift, Mod1 (Alt), Mod2 (NumLock),
+#   Mod3 (CapsLock), Mod4, Mod5 (Scroll).
+#
+
+# The release modifier is not a standard X modifier, but you can
+# use it if you want to catch release events instead of press events
+
+# By defaults, xbindkeys does not pay attention with the modifiers
+# NumLock, CapsLock and ScrollLock.
+# Uncomment the lines above if you want to pay attention to them.
+
+#keystate_numlock = enable
+#keystate_capslock = enable
+#keystate_scrolllock= enable
+
+
+### SYSTEM ACTIONS ###
+
+"systemctl suspend"
+	Mod2+Mod4 + l
+
+"xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/presentation-mode -T"
+	Mod2+Mod4 + p
+
+
+### WINDOW MANAGEMENT ###
+
+"/home/arthur/.dotfiles/movescreen.py -r up"
+	Shift+Mod2+Mod4 + Up
+
+"/home/arthur/.dotfiles/movescreen.py -r down"
+	Shift+Mod2+Mod4 + Down
+
+
+### ROFI ###
+
+"rofi -show drun"
+	Alt+Mod2 + F1
+	# The super key is mapped to Alt+F1 (xcape) in .xprofile
+
+"rofi -show run"
+	Mod2+Mod4 + space
+
+
+### OPEN SYSTEMS CONFIGS ###
+
+"blueman-manager"
+	Control+Alt+Mod2 + b
+
+"xfce4-display-settings --minimal"
+	Control+Alt+Mod2 + p
+
+
+### LAUNCH APPS ###
+
+"xfce4-terminal"
+	Mod2+Mod4 + Return
+
+"thunar"
+	Mod2+Mod4 + f
+
+"gnome-screenshot -i"
+	Mod2 + Print
+
