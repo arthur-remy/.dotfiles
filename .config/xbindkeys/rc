@@ -83,6 +83,9 @@
 "thunar"
 	Mod2+Mod4 + f
 
+"xfce4-terminal -x nvim"
+	Mod2+Mod4 + e
+
 "gnome-screenshot -i"
 	Mod2 + Print
 
