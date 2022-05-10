@@ -20,7 +20,7 @@ set splitright
 set backup
 set undofile
 set path=**
-set sessionoptions=curdir,folds
+" set sessionoptions=curdir,folds
 set listchars=eol:↩,tab:→\ ,space:·
 set breakindent								" keep tabulation level when wrapping a line
 set linebreak								" don't wrap line in the middle of a word
@@ -37,6 +37,8 @@ set lazyredraw								" Don't update screen during macro execution
 set tabstop=4								" tab = 4 spaces
 set shiftwidth=4							" 1 indentation level = 4 spaces
 set shiftround								" round shift value when there is already spaces
+set title
+set titlestring=vim:\ %t
 
 " " Automatically load and save fold text inside a file
 " /!\ Error message when opening non-writable files
