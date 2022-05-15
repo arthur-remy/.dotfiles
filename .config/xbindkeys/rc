@@ -47,15 +47,15 @@
 	Mod2+Mod4 + p
 
 "$HOME/.dotfiles/scripts/toggle-bluetooth.sh"
-	Control+Shift+Mod2 + b
+	Control+Alt+Mod2 + b
 
 
 ### WINDOW MANAGEMENT ###
 
-"/home/arthur/.dotfiles/movescreen.py -r up"
+"/home/arthur/.dotfiles/scripts/Window\ Management/movescreen.py -r up"
 	Shift+Mod2+Mod4 + Up
 
-"/home/arthur/.dotfiles/movescreen.py -r down"
+"/home/arthur/.dotfiles/scripts/Window\ Management/movescreen.py -r down"
 	Shift+Mod2+Mod4 + Down
 
 
@@ -72,9 +72,12 @@
 ### OPEN SYSTEMS CONFIGS ###
 
 "blueman-manager"
-	Control+Alt+Mod2 + b
+	Mod2+Mod4 + b
 
 "xfce4-display-settings --minimal"
+    Control+Shift+Alt+Mod2 + p
+
+"$HOME/.dotfiles/scripts/rofi-autorandr.sh"
 	Control+Alt+Mod2 + p
 
 
@@ -94,4 +97,7 @@
 
 "mailspring & slack & firefox &"
     Control+Alt+Mod2 + w
+
+"fd -H -t f . $HOME/Documents/Notes | rofi -dmenu | xargs -r nvim"
+	Mod2+Mod4 + n
 
