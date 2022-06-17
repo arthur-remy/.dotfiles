@@ -1,0 +1,13 @@
+docker
+docker-compose
+fish
+fzf
+htop
+neovim
+qemu
+speedtest-cli
+syncthing
+tmux
+vifm
+wireguard-tools
+

@@ -1,0 +1,8 @@
+gnome-screenshot
+arc-gtk-theme
+nerd-fonts-hack
+xclip
+acpilight
+hunspell-en_us
+hunspell-fr
+

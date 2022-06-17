@@ -1,0 +1,14 @@
+alacritty
+calibre
+chromium
+code
+firefox
+gimp
+qpdfview
+gparted
+rofi
+syncthingtray
+thunderbird
+virt-manager
+vlc
+
