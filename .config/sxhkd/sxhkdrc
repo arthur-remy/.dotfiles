@@ -1,0 +1,66 @@
+super + l
+	systemctl suspend
+
+super + p
+	xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/presentation-mode -T
+
+control + alt + b
+	$HOME/.dotfiles/scripts/toggle-bluetooth.sh
+
+
+### WINDOW MANAGEMENT ###
+
+super + shift + {Up,Down}
+	/home/arthur/.dotfiles/scripts/Window\ Management/movescreen.py -r {up,down}
+
+super + exclam
+	wmctrl -c :ACTIVE:
+
+### ROFI ###
+
+# The super key is mapped to Alt+F1 (xcape) in .xprofile
+alt + F1
+	rofi -show combi -combi-modi "window,drun" -modi combi
+
+super + space
+	rofi -show run
+
+
+### OPEN SYSTEMS CONFIGS ###
+
+super + b
+	blueman-manager
+
+control + shift + alt + p
+	xfce4-display-settings --minimal
+
+control + alt + p
+	$HOME/.dotfiles/scripts/rofi-autorandr.sh
+
+
+### LAUNCH APPS ###
+
+super + {_, shift +} Return
+	{$HOME/.dotfiles/scripts/Window\ Management/run-or-raise.sh xfce4-terminal.Xfce4-terminal, } xfce4-terminal
+
+super + {_, shift +} w
+	{$HOME/.dotfiles/scripts/Window\ Management/run-or-raise.sh Navigator.firefox, } firefox
+
+super + {_, shift +} f
+	{$HOME/.dotfiles/scripts/Window\ Management/run-or-raise thunar.Thunar, } thunar
+
+super + e
+	xfce4-terminal - nvim
+
+Print
+	gnome-screenshot -i
+
+control + alt + w
+	mailspring & slack & firefox & google-calendar-nativefier &
+
+super + n
+	fd -H -t f . $HOME/Documents/Notes | rofi -dmenu | xargs -r nvim
+
+super + t
+	$HOME/Documents/Code/Projects/python_utils/log_action_on_jira.py
+
