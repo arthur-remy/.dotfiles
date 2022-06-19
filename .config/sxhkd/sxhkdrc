@@ -5,13 +5,13 @@ super + p
 	xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/presentation-mode -T
 
 control + alt + b
-	$HOME/.dotfiles/scripts/toggle-bluetooth.sh
+	$HOME/.config/scripts/toggle-bluetooth.sh
 
 
 ### WINDOW MANAGEMENT ###
 
 super + shift + {Up,Down}
-	/home/arthur/.dotfiles/scripts/Window\ Management/movescreen.py -r {up,down}
+	/home/arthur/.config/scripts/Window\ Management/movescreen.py -r {up,down}
 
 super + exclam
 	wmctrl -c :ACTIVE:
@@ -35,19 +35,19 @@ control + shift + alt + p
 	xfce4-display-settings --minimal
 
 control + alt + p
-	$HOME/.dotfiles/scripts/rofi-autorandr.sh
+	$HOME/.config/scripts/rofi-autorandr.sh
 
 
 ### LAUNCH APPS ###
 
 super + {_, shift +} Return
-	{$HOME/.dotfiles/scripts/Window\ Management/run-or-raise.sh xfce4-terminal.Xfce4-terminal, } xfce4-terminal
+	{$HOME/.config/scripts/Window\ Management/run-or-raise.sh xfce4-terminal.Xfce4-terminal, } xfce4-terminal
 
 super + {_, shift +} w
-	{$HOME/.dotfiles/scripts/Window\ Management/run-or-raise.sh Navigator.firefox, } firefox
+	{$HOME/.config/scripts/Window\ Management/run-or-raise.sh Navigator.firefox, } firefox
 
 super + {_, shift +} f
-	{$HOME/.dotfiles/scripts/Window\ Management/run-or-raise thunar.Thunar, } thunar
+	{$HOME/.config/scripts/Window\ Management/run-or-raise thunar.Thunar, } thunar
 
 super + e
 	xfce4-terminal - nvim
