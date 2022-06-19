@@ -8,3 +8,7 @@ iab ... …
 
 iab Cdt Cordialement,<CR>Arthur
 
+iab benoit Benoît
+iab Benoit Benoît
+iab consensys ConsenSys
+

@@ -64,3 +64,7 @@ augroup reloadConfig
 	autocmd BufWritePost custom-functions.vim source <afile>
 augroup end
 
+augroup applyNewExternalConfig
+	autocmd!
+	autocmd BufWritePost *sxhkdrc !killall sxhkd; setsid sxhkd &
+augroup end
