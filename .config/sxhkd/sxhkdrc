@@ -47,7 +47,7 @@ super + {_, shift +} w
 	{$HOME/.config/scripts/Window\ Management/run-or-raise.sh Navigator.firefox, } firefox
 
 super + {_, shift +} f
-	{$HOME/.config/scripts/Window\ Management/run-or-raise thunar.Thunar, } thunar
+	{$HOME/.config/scripts/Window\ Management/run-or-raise.sh Thunar.Thunar, } thunar
 
 super + e
 	xfce4-terminal - nvim
