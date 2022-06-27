@@ -1,0 +1,7 @@
+speedtest-cli
+vifm
+syncthing
+qemu
+wireguard-tools
+fish
+

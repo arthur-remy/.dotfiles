@@ -1,6 +1,6 @@
-gnome-screenshot
+rofi
 arc-gtk-theme
-nerd-fonts-hack
+papirus-icon-theme
 xclip
 acpilight
 hunspell-en_us
