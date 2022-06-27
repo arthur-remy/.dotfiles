@@ -1,0 +1,8 @@
+[user]
+	email = arthur@coeos.xyz
+	name = Arthur
+[color]
+	ui = true
+[core]
+	pager = less -r
+
