@@ -2,19 +2,10 @@ call plug#begin('~/.vim/plugged')
 Plug 'ap/vim-css-color'
 Plug 'vim-scripts/vim-gitgutter'
 Plug 'itchyny/lightline.vim'
-" Plug 'dense-analysis/ale'
-Plug 'tpope/vim-commentary'
-Plug 'godlygeek/tabular'
-Plug 'lunarvim/colorschemes'
 Plug 'joshdick/onedark.vim'
-Plug 'arcticicestudio/nord-vim'
-Plug 'tpope/vim-surround'
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 Plug 'dkarter/bullets.vim'  " Automatically add bullets/numbering when adding a new line after a bullet list
 Plug 'junegunn/fzf.vim'
-Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
-Plug 'raghur/vim-ghost', {'do': ':GhostInstall'}
-Plug 'vimwiki/vimwiki'
+" Plug 'dense-analysis/ale'
 call plug#end()
 
 """ OPTIONS
