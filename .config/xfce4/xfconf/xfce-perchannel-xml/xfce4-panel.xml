@@ -15,6 +15,7 @@
         <value type="int" value="6"/>
         <value type="int" value="7"/>
         <value type="int" value="8"/>
+        <value type="int" value="9"/>
       </property>
       <property name="role" type="string" value="xfce4-panel-12965750720"/>
       <property name="length-adjust" type="bool" value="true"/>
@@ -34,7 +35,7 @@
         <value type="double" value="1.000000"/>
       </property>
     </property>
-    <property name="dark-mode" type="bool" value="false"/>
+    <property name="dark-mode" type="bool" value="true"/>
   </property>
   <property name="plugins" type="empty">
     <property name="plugin-1" type="string" value="separator">
@@ -61,39 +62,38 @@
       </property>
       <property name="show-frame" type="bool" value="false"/>
       <property name="known-legacy-items" type="array">
-        <value type="string" value="networkmanager applet"/>
-        <value type="string" value="pamac-tray"/>
-        <value type="string" value="clipman"/>
       </property>
       <property name="known-items" type="array">
-        <value type="string" value="blueman"/>
-        <value type="string" value="Nextcloud"/>
       </property>
       <property name="hidden-items" type="array">
       </property>
-      <property name="icon-size" type="int" value="22"/>
-      <property name="single-row" type="bool" value="false"/>
+      <property name="icon-size" type="int" value="0"/>
+      <property name="single-row" type="bool" value="true"/>
       <property name="hide-new-items" type="bool" value="false"/>
       <property name="square-icons" type="bool" value="true"/>
       <property name="menu-is-primary" type="bool" value="false"/>
-      <property name="symbolic-icons" type="bool" value="false"/>
+      <property name="symbolic-icons" type="bool" value="true"/>
       <property name="hidden-legacy-items" type="array">
       </property>
     </property>
     <property name="plugin-5" type="string" value="notification-plugin"/>
     <property name="plugin-6" type="string" value="pulseaudio">
       <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
-      <property name="mpris-players" type="string" value=""/>
     </property>
     <property name="plugin-7" type="string" value="power-manager-plugin"/>
     <property name="plugin-8" type="string" value="clock">
-      <property name="digital-format" type="string" value="%_H:%M"/>
+      <property name="digital-format" type="string" value="%_H:%M  %d/%m"/>
+      <property name="mode" type="uint" value="2"/>
     </property>
     <property name="clipman" type="empty">
       <property name="tweaks" type="empty">
-        <property name="inhibit" type="bool" value="true"/>
+        <property name="inhibit" type="bool" value="false"/>
         <property name="never-confirm-history-clear" type="bool" value="true"/>
       </property>
+    </property>
+    <property name="plugin-9" type="string" value="separator">
+      <property name="style" type="uint" value="0"/>
+      <property name="expand" type="bool" value="false"/>
     </property>
   </property>
   <property name="configver" type="int" value="2"/>
