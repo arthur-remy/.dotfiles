@@ -1,7 +1,8 @@
 call plug#begin('~/.vim/plugged')
 Plug 'ap/vim-css-color'
-Plug 'vim-scripts/vim-gitgutter'
+Plug 'airblade/vim-gitgutter'
 Plug 'itchyny/lightline.vim'
+Plug 'tpope/vim-commentary'
 Plug 'joshdick/onedark.vim'
 Plug 'dkarter/bullets.vim'  " Automatically add bullets/numbering when adding a new line after a bullet list
 Plug 'junegunn/fzf.vim'
@@ -9,6 +10,11 @@ Plug 'junegunn/fzf.vim'
 call plug#end()
 
 """ OPTIONS
+
+augroup gitGutterDotfiles
+	autocmd!
+	autocmd BufRead $HOME/.** let g:gitgutter_git_args='--git-dir=$HOME/.dotfiles --work-tree=$HOME'
+augroup end
 
 let g:gitgutter_map_keys = 0				" disable GitGutter mappings to avoid conflicts with navigation key bindings
 let g:lightline = {'colorscheme': 'wombat'}
