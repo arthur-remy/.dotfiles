@@ -29,7 +29,7 @@ super + space
 ### OPEN SYSTEMS CONFIGS ###
 
 super + b
-	blueman-manager
+	rfkill unblock bluetooth && blueman-manager
 
 control + shift + alt + p
 	xfce4-display-settings --minimal
