@@ -17,7 +17,5 @@ export EDITOR=nvim
 # CUSTOM COMMANDS
 
 alias e='nvim'
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-alias helpcmd='nvim $HOME/.dotfiles/frequent_cmd.txt'
-alias todo='nvim $HOME/Documents/Notes/todo.md'
+alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
