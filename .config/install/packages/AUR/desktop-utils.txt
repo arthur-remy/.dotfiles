@@ -3,4 +3,5 @@ xcursor-simp1e-tokyo-night
 xcursor-simp1e-dark
 xcursor-simp1e-nord-dark
 syncthingtray
+rofimoji
 
