@@ -41,7 +41,7 @@ control + alt + p
 ### LAUNCH APPS ###
 
 super + {_, shift +} Return
-	{$HOME/.config/scripts/Window\ Management/run-or-raise.sh xfce4-terminal.Xfce4-terminal, } xfce4-terminal
+	{$HOME/.config/scripts/Window\ Management/run-or-raise.sh Alacritty.Alacritty, } alacritty
 
 super + {_, shift +} w
 	{$HOME/.config/scripts/Window\ Management/run-or-raise.sh Navigator.firefox, } firefox
@@ -63,4 +63,7 @@ super + n
 
 super + t
 	$HOME/Documents/Code/Projects/python_utils/log_action_on_jira.py
+
+super + parenright
+	rofimoji
 
