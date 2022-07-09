@@ -31,6 +31,5 @@ window {
 }
 
 
-/* @theme "~/.config/rofi/blurry.rasi" */
 @theme "~/.config/rofi/horizontal-arc-dark-theme.rasi"
 
