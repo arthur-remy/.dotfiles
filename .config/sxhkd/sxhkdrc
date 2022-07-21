@@ -1,12 +1,23 @@
+### SYSTEM ###
+
 super + l
 	systemctl suspend-then-hibernate
 
 super + p
 	xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/presentation-mode -T
 
+
+### BLUETOOTH ###
+
 control + alt + b
 	$HOME/.config/scripts/toggle-bluetooth.sh
 
+super + b
+	bluetoothctl power on && rfkill unblock bluetooth && blueman-manager
+
+# Connect to headphones
+super + shift + b
+	bluetoothctl connect D4:68:AA:DB:09:D0
 
 ### WINDOW MANAGEMENT ###
 
@@ -28,9 +39,6 @@ super + space
 
 ### OPEN SYSTEMS CONFIGS ###
 
-super + b
-	rfkill unblock bluetooth && blueman-manager
-
 control + shift + alt + p
 	xfce4-display-settings --minimal
 
@@ -43,7 +51,7 @@ control + alt + p
 super + {_, shift +} Return
 	{$HOME/.config/scripts/Window\ Management/run-or-raise.sh Alacritty.Alacritty, } alacritty
 
-super + {_, shift +} w
+super + {_, shift +} u
 	{$HOME/.config/scripts/Window\ Management/run-or-raise.sh Navigator.firefox, } firefox
 
 super + {_, shift +} f
@@ -66,4 +74,7 @@ super + t
 
 super + parenright
 	rofimoji
+
+super + i
+	$HOME/.config/scripts/Window\ Management/run-or-raise.sh slack.Slack slack
 
