@@ -13,11 +13,11 @@ control + alt + b
 	$HOME/.config/scripts/toggle-bluetooth.sh
 
 super + b
-	bluetoothctl power on && rfkill unblock bluetooth && blueman-manager
+	bluetoothctl power on; rfkill unblock bluetooth; blueman-manager
 
 # Connect to headphones
 super + shift + b
-	bluetoothctl connect D4:68:AA:DB:09:D0
+	bluetoothctl power on; rfkill unblock bluetooth; bluetoothctl connect D4:68:AA:DB:09:D0
 
 ### WINDOW MANAGEMENT ###
 
@@ -46,6 +46,11 @@ control + alt + p
 	$HOME/.config/scripts/rofi-autorandr.sh
 
 
+### SCREENSHOTS ###
+
+Print
+	$HOME/.local/bin/screenshot
+
 ### LAUNCH APPS ###
 
 super + {_, shift +} Return
@@ -59,9 +64,6 @@ super + {_, shift +} f
 
 super + e
 	xfce4-terminal - nvim
-
-Print
-	gnome-screenshot -i
 
 control + alt + w
 	mailspring & slack & firefox & google-calendar-nativefier &

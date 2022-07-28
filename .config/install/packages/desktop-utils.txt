@@ -7,4 +7,5 @@ acpilight
 hunspell-en_us
 hunspell-fr
 noto-fonts-emoji
+scrot
 

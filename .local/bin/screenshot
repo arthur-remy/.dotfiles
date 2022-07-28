@@ -1,0 +1,8 @@
+#! /bin/sh
+
+# Inspired by Eric Murphy
+# https://github.com/ericmurphyxyz/archrice/blob/master/.local/bin/screenshot
+# and https://unix.stackexchange.com/a/625430
+
+scrot $HOME/Pictures/Screenshots/%Y-%m-%d-%T-screenshot.png --select --line mode=edge --exec 'xclip -selection clipboard -t image/png -i $f'
+

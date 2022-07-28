@@ -10,5 +10,4 @@ syncthingtray
 thunderbird
 virt-manager
 vlc
-gnome-screenshot
 
