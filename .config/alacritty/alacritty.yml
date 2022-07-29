@@ -1,6 +1,9 @@
 shell:
   program: /bin/fish
 
+env:
+  TERM: xterm-256color
+
 font:
    family: Hack Nerd Font
    size: 10
