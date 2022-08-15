@@ -1,11 +1,30 @@
 ### SYSTEM ###
 
-super + l
+super + BackSpace
 	systemctl suspend-then-hibernate
 
 super + p
 	xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/presentation-mode -T
 
+### MEDIA & VOLUME KEYS ###
+
+XF86AudioRaiseVolume
+	pactl set-sink-volume @DEFAULT_SINK@ +10%
+
+XF86AudioLowerVolume
+	pactl set-sink-volume @DEFAULT_SINK@ -10%
+
+XF86AudioMute
+	pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+XF86AudioPlay
+	playerctl play-pause
+
+XF86AudioPrev
+	playerctl previous
+
+XF86AudioNext
+	playerctl next
 
 ### BLUETOOTH ###
 
@@ -66,7 +85,7 @@ super + e
 	xfce4-terminal - nvim
 
 control + alt + w
-	mailspring & slack & firefox & google-calendar-nativefier &
+	mailspring & slack & google-calendar-nativefier &
 
 super + n
 	fd -H -t f . $HOME/Documents/Notes | rofi -dmenu | xargs -r nvim
