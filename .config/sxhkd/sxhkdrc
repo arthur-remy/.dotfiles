@@ -29,7 +29,7 @@ XF86AudioNext
 ### BLUETOOTH ###
 
 control + alt + b
-	$HOME/.config/scripts/toggle-bluetooth.sh
+	$HOME/.local/bin/toggle-bluetooth
 
 super + b
 	bluetoothctl power on; rfkill unblock bluetooth; blueman-manager
@@ -41,7 +41,7 @@ super + shift + b
 ### WINDOW MANAGEMENT ###
 
 super + shift + {Up,Down}
-	/home/arthur/.config/scripts/Window\ Management/movescreen.py -r {up,down}
+	$HOME/.local/bin/changescreen -r {up,down}
 
 super + exclam
 	wmctrl -c :ACTIVE:
@@ -62,7 +62,7 @@ control + shift + alt + p
 	xfce4-display-settings --minimal
 
 control + alt + p
-	$HOME/.config/scripts/rofi-autorandr.sh
+	$HOME/.local/bin/rofi-autorandr
 
 
 ### SCREENSHOTS ###
@@ -71,18 +71,16 @@ Print
 	$HOME/.local/bin/screenshot
 
 ### LAUNCH APPS ###
+# run-or-raise script is in located in $HOME/.local/bin/run-or-raise
 
 super + {_, shift +} Return
-	{$HOME/.config/scripts/Window\ Management/run-or-raise.sh Alacritty.Alacritty, } alacritty
+	{run-or-raise Alacritty.Alacritty, } alacritty
 
 super + {_, shift +} u
-	{$HOME/.config/scripts/Window\ Management/run-or-raise.sh Navigator.firefox, } firefox
+	{run-or-raise Navigator.firefox, } firefox
 
 super + {_, shift +} f
-	{$HOME/.config/scripts/Window\ Management/run-or-raise.sh Thunar.Thunar, } thunar
-
-super + e
-	xfce4-terminal - nvim
+	{run-or-raise Thunar.Thunar, } thunar
 
 control + alt + w
 	mailspring & slack & google-calendar-nativefier &
@@ -97,5 +95,5 @@ super + parenright
 	rofimoji
 
 super + i
-	$HOME/.config/scripts/Window\ Management/run-or-raise.sh slack.Slack slack
+	run-or-raise slack.Slack slack
 

@@ -1,4 +1,5 @@
 #!/bin/sh
+
 # syntax: run-or-raise WM_CLASS_name COMMAND
 #   WM_CLASS_name : the WM_CALL_name of the window (from wmctrl -lx output)
 #   COMMAND : the command to run if nothing to raise
@@ -28,3 +29,4 @@ for ID in $WINIDS; do
                 wmctrl -i -a "$ID"
         fi
 done
+

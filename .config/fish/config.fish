@@ -2,7 +2,7 @@ set -U EDITOR nvim
 set -U fish_greeting
 
 # load alias
-source $HOME/.config/scripts/bash_aliases.sh
+source $HOME/.config/bash_aliases.sh
 
 export FZF_DEFAULT_COMMAND='fd . -H'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
