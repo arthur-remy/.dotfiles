@@ -6,5 +6,6 @@ xcape -e 'Super_L=Alt_L|F1' &
 sxhkd > $HOME/.local/state/sxhkd.log 2>&1 &
 xss-lock xsecurelock &
 blueman-applet &
+udiskie --no-notify &
 pactl load-module module-switch-on-connect
 
