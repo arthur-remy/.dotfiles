@@ -1,0 +1,10 @@
+xrdb $HOME/.config/X11/.Xresources &
+polybar > $HOME/.local/state/polybar.log 2>&1 &
+lxpanel &
+feh --bg-scale $HOME/Pictures/Wallpapers &
+xcape -e 'Super_L=Alt_L|F1' &
+sxhkd > $HOME/.local/state/sxhkd.log 2>&1 &
+xss-lock xsecurelock &
+blueman-applet &
+pactl load-module module-switch-on-connect
+
