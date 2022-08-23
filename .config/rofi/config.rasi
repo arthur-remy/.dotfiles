@@ -12,6 +12,7 @@ configuration {
 	monitor: "primary";
 	display: "primary"; /* must be coupled with monitor: primary */
 	/* Changed to avoid conflict with Ctrl+h,j,k,l */
+	kb-element-prev: "";
 	kb-remove-char-back: "BackSpace,Shift+BackSpace";
 	kb-mode-complete: "";
 	kb-accept-entry: "Return"; 
@@ -29,7 +30,6 @@ window {
 	kb-remove-char-forward: "Control+d";
 	kb-accept-alt: "Delete";
 }
-
 
 @theme "~/.config/rofi/horizontal-arc-dark-theme.rasi"
 
