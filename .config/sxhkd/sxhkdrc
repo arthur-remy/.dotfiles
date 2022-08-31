@@ -97,3 +97,6 @@ super + parenright
 super + i
 	run-or-raise slack.Slack slack
 
+super + o
+	fd . -H -t f | fzfmenu | xargs --no-run-if-empty xdg-open
+

@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# https://github.com/meribold/dotfiles/blob/master/home/bin/fzfmenu
+
+exec alacritty --class fzfmenu,fzfmenu -e sh -c "fzf $* < /proc/$$/fd/0 > /proc/$$/fd/1"
+
