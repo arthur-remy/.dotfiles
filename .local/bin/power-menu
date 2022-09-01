@@ -1,0 +1,10 @@
+#!/bin/sh
+
+options="poweroff
+reboot
+suspend-then-hibernate
+suspend
+hibernate"
+
+echo -e "$options" | fzfmenu | xargs --no-run-if-empty systemctl
+

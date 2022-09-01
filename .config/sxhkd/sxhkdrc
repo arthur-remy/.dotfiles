@@ -6,6 +6,9 @@ super + BackSpace
 super + p
 	xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/presentation-mode -T
 
+XF86PowerOff
+	power-menu
+
 ### MEDIA & VOLUME KEYS ###
 
 XF86AudioRaiseVolume
@@ -98,5 +101,5 @@ super + i
 	run-or-raise slack.Slack slack
 
 super + o
-	fd . -H -t f | fzfmenu | xargs --no-run-if-empty xdg-open
+	fd . -H -t f | fzfmenu | xargs --no-run-if-empty gio open
 
