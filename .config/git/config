@@ -6,3 +6,7 @@
 [core]
 	pager = less -r
 
+[alias]
+	c = commit -m
+	a = add
+
