@@ -1,0 +1,43 @@
+# lxpanel <profile> config file. Manually editing is not recommended.
+# Use preference dialog in lxpanel to adjust config when you can.
+
+Global {
+  edge=top
+  allign=left
+  margin=10
+  widthtype=percent
+  width=30
+  height=22
+  transparent=1
+  tintcolor=#272a34
+  alpha=255
+  setdocktype=1
+  setpartialstrut=1
+  usefontcolor=1
+  fontcolor=#ffffff
+  usefontsize=0
+  fontsize=10
+  background=0
+  backgroundfile=/usr/share/lxpanel/images/background.png
+  iconsize=20
+  align=left
+}
+Plugin {
+  type=taskbar
+  expand=1
+  Config {
+    tooltips=0
+    IconsOnly=-1
+    AcceptSkipPager=1
+    ShowIconified=1
+    ShowMapped=1
+    ShowAllDesks=-1
+    UseMouseWheel=0
+    UseUrgencyHint=1
+    FlatButton=-1
+    MaxTaskWidth=150
+    spacing=1
+    DisableUpscale=0
+    UseSmallerIcons=-1
+  }
+}
