@@ -40,6 +40,10 @@ set shiftround								" round shift value when there is already spaces
 set title
 set titlestring=vim:\ %t
 
+""" NETRW CONFIG
+let g:netrw_banner = 0						" don't show banner on top of file explorer
+let g:netrw_liststyle = 3					" enable tree-like view
+
 " " Automatically load and save fold text inside a file
 " /!\ Error message when opening non-writable files
 " autocmd BufWinLeave *.* mkview 

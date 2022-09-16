@@ -6,6 +6,10 @@ Plug 'tpope/vim-commentary'
 Plug 'joshdick/onedark.vim'
 Plug 'dkarter/bullets.vim'  " Automatically add bullets/numbering when adding a new line after a bullet list
 Plug 'junegunn/fzf.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'ervandew/supertab'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'tpope/vim-fugitive'
 " Plug 'dense-analysis/ale'
 call plug#end()
 
