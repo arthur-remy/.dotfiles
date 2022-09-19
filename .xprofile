@@ -1,7 +1,8 @@
-#!/usr/bin/bash
+#!/bin/sh
 
 xcape -e 'Super_L=Alt_L|F1'
 setxkbmap fr
 xbacklight -set 50
+export PATH="$PATH:$HOME/.local/bin"
 sxhkd &
 
