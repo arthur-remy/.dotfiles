@@ -54,8 +54,8 @@ source $HOME/.vim/configs/plugins.vim
 source $HOME/.vim/configs/keymaps.vim
 source $HOME/.vim/configs/theme.vim
 source $HOME/.vim/configs/abbreviations.vim
-source $HOME/.vim/configs/custom-commands.vim
 source $HOME/.vim/configs/custom-functions.vim
+source $HOME/.vim/configs/custom-file-config.vim
 
 augroup reloadConfig
 	autocmd!
@@ -72,3 +72,4 @@ augroup applyNewExternalConfig
 	autocmd!
 	autocmd BufWritePost *sxhkdrc !killall sxhkd; setsid sxhkd &
 augroup end
+
