@@ -62,7 +62,7 @@ map <silent> <leader>b :Buffers<CR>
 " Search in current files
 "
 " File open recently
-map <silent> <leader>$ :History<CR>
+map <silent> <leader>o :History<CR>
 
 
 """ FILE MANAGEMENT
