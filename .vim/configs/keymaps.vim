@@ -1,4 +1,6 @@
 let mapleader = " "
+nnoremap <Space> <Nop>
+" line above default space action (go 1 line down) to be executed after the leader mapping
 
 """ EDITING
 
