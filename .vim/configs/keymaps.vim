@@ -69,8 +69,8 @@ map <silent> <leader>o :History<CR>
 
 """ FILE MANAGEMENT
 
-nmap <leader>w :w!<CR>  " write file
-nmap <leader>q :q!<CR>  " quite file
+nmap <leader>w :w<CR>  " write file
+nmap <leader>q :q<CR>  " quite file
 nnoremap <leader>r :!%:p<CR>  " execute current file
 nmap <silent> <leader>n :set relativenumber!<CR>  " toggle relative line numbering
 
