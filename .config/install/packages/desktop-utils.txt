@@ -1,5 +1,6 @@
 rofi
 sxhkd
+xcape
 arc-gtk-theme
 papirus-icon-theme
 xclip
