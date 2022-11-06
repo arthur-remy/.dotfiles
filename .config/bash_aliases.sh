@@ -10,6 +10,7 @@ alias grep='grep --color=auto'
 alias mv='mv -i'
 alias cp='cp -i'
 alias ln='ln -i'
+alias ping1='ping 1.1.1.1'
 
 export LIBVIRT_DEFAULT_URI='qemu:///system'  # connect to root's VMs
 export EDITOR=nvim
