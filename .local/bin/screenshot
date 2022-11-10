@@ -4,5 +4,13 @@
 # https://github.com/ericmurphyxyz/archrice/blob/master/.local/bin/screenshot
 # and https://unix.stackexchange.com/a/625430
 
-scrot $HOME/Pictures/Screenshots/%Y-%m-%d-%T-screenshot.png --select --line mode=edge --exec 'xclip -selection clipboard -t image/png -i $f'
+SCREENSHOT_PATH="$HOME/Pictures/Screenshots/"
+TIMESTAMP=$(date +"%Y-%m-%d-%T")
+fpath="$SCREENSHOT_PATH$TIMESTAMP-screenshot.png"
+
+scrot $fpath --select --line mode=edge --exec 'xclip -selection clipboard -t image/png -i $f'
+
+if [[ $1 = "--edit" ]]; then
+	drawing $fpath
+fi
 

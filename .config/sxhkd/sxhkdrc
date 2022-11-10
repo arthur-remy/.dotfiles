@@ -73,6 +73,9 @@ control + alt + p
 Print
 	$HOME/.local/bin/screenshot
 
+control + Print
+	$HOME/.local/bin/screenshot --edit
+
 ### LAUNCH APPS ###
 # run-or-raise script is in located in $HOME/.local/bin/run-or-raise
 
