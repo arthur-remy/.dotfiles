@@ -10,4 +10,5 @@ hunspell-fr
 noto-fonts-emoji
 scrot
 xdotool
+unclutter
 
