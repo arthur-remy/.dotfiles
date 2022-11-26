@@ -11,4 +11,5 @@ sxhkd > $HOME/.local/state/sxhkd.log 2>&1 &
 xbacklight -set 50
 xss-lock xsecurelock &
 udiskie --no-notify &
+unclutter -b --timeout 3 &
 
