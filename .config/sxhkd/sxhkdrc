@@ -82,6 +82,9 @@ control + alt + p
 Print
 	$HOME/.local/bin/screenshot
 
+control + Print
+	$HOME/.local/bin/screenshot --edit
+
 ### LAUNCH APPS ###
 # run-or-raise script is in located in $HOME/.local/bin/run-or-raise
 
@@ -98,10 +101,7 @@ control + alt + w
 	mailspring & slack & google-calendar-nativefier &
 
 super + n
-	fd -H -t f . $HOME/Documents/Notes | rofi -dmenu | xargs -r nvim
-
-super + t
-	$HOME/Documents/Code/Projects/python_utils/log_action_on_jira.py
+	fd -H -t f . $HOME/Notes | fzfmenu | xargs --no-run-if-empty gio open
 
 super + parenright
 	rofimoji
