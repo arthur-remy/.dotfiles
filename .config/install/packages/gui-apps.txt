@@ -8,4 +8,5 @@ gparted
 thunderbird
 virt-manager
 vlc
+mpv
 
