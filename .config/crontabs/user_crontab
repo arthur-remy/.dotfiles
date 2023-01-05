@@ -1,2 +1,4 @@
-@weekly trash-empty 14
-@weekly yay -Sc
+@weekly				trash-empty 14
+@weekly				yay -Sc
+*/10 * * * *        $HOME/.local/bin/systemd-failure-notification.py
+
