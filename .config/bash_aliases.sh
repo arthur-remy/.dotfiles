@@ -4,7 +4,7 @@ export NOTES='/home/arthur/Documents/Notes'
 
 # CHANGE DEFAULT BEHAVIOR OF DEFAULT CMD
 
-alias ls='ls -lah --color=auto'
+alias ll='ls -lAh --color=auto'
 alias fd='fd -H'  # show hidden files
 alias grep='grep --color=auto'
 alias mv='mv -i'
@@ -17,6 +17,7 @@ export EDITOR=nvim
 
 # CUSTOM COMMANDS
 
+alias l='exa --icons --sort=Name --all'
 alias e='nvim'
 alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias h='cht.sh'
