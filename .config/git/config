@@ -5,8 +5,10 @@
 	ui = true
 [core]
 	pager = less -r
-
 [alias]
 	c = commit -m
 	a = add
+	s = status
+[status]
+	showUntrackedFiles = no
 
