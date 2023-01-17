@@ -3,6 +3,6 @@
 xcape -e 'Super_L=Alt_L|F1'
 setxkbmap fr
 xbacklight -set 50
-export PATH="$PATH:$HOME/.local/bin"
+[ -f $HOME/.config/shell/env-variable.sh ] && source $HOME/.config/shell/env-variable.sh
 sxhkd &
 
