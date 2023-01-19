@@ -21,4 +21,5 @@ alias l='exa --icons --sort=.Name --all --group-directories-first'
 alias e='nvim'
 alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias h='cht.sh'
+alias pac-history='sudo grep "\[ALPM\]" /var/log/pacman.log |  grep -E "installed|removed|upgraded" | less'
 
