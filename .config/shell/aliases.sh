@@ -17,7 +17,7 @@ export EDITOR=nvim
 
 # CUSTOM COMMANDS
 
-alias l='exa --icons --sort=Name --all --group-directories-first'
+alias l='exa --icons --sort=.Name --all --group-directories-first'
 alias e='nvim'
 alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias h='cht.sh'
