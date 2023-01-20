@@ -8,7 +8,6 @@ cache_path = Path.home() / ".cache/custom-scripts/systemd-failure-notification"
 notification_icon = 'placeholder'
 
 IGNORED_SERVICES = [
-        "shadow.service",
         ]
 
 cmd_output = getoutput("systemctl --failed --no-legend")
