@@ -101,7 +101,7 @@ control + alt + w
 	mailspring & slack & google-calendar-nativefier &
 
 super + n
-	fd -H -t f . $HOME/Notes | fzfmenu | xargs --no-run-if-empty gio open
+	fd -H -t f . $HOME/Notes | fzfmenu | xargs --no-run-if-empty -d '\n' gio open
 
 super + parenright
 	rofimoji
@@ -110,5 +110,5 @@ super + i
 	run-or-raise slack.Slack slack
 
 super + o
-	fd . -H -t f | fzfmenu --with-nth -1 -d / | xargs --no-run-if-empty gio open
+	fd . -H -t f | fzfmenu --with-nth -1 -d / | xargs --no-run-if-empty -d '\n' gio open
 
