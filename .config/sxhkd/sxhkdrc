@@ -85,6 +85,9 @@ Print
 control + Print
 	$HOME/.local/bin/screenshot --edit
 
+Home
+	$HOME/.local/bin/record-screen
+
 ### LAUNCH APPS ###
 # run-or-raise script is in located in $HOME/.local/bin/run-or-raise
 
@@ -110,5 +113,5 @@ super + i
 	run-or-raise slack.Slack slack
 
 super + o
-	fd . -H -t f | fzfmenu --with-nth -1 -d / | xargs --no-run-if-empty -d '\n' gio open
+	fd -H -t f . $HOME | fzfmenu --with-nth -1 -d / | xargs --no-run-if-empty -d '\n' gio open
 
