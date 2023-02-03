@@ -11,6 +11,10 @@ fpath="$SCREENSHOT_PATH$TIMESTAMP-screenshot.png"
 scrot $fpath --select --line mode=edge --exec 'xclip -selection clipboard -t image/png -i $f'
 
 if [[ $1 = "--edit" ]]; then
-	drawing $fpath
+	pinta $fpath
+	xclip -selection clipboard -t image/png -i "$fpath"
+elif [[ $1 = "--ocr" ]]; then
+	text=$(tesseract $fpath stdout)
+	echo $text | xclip -selection clip
 fi
 
