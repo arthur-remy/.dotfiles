@@ -14,7 +14,8 @@ if [[ $1 = "--edit" ]]; then
 	pinta $fpath
 	xclip -selection clipboard -t image/png -i "$fpath"
 elif [[ $1 = "--ocr" ]]; then
-	text=$(tesseract $fpath stdout)
-	echo $text | xclip -selection clip
+	output_file="/tmp/ocr-$TIMESTAMP"
+	tesseract "$fpath" $output_file
+	xclip -selection clip "$output_file.txt"
 fi
 
