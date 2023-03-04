@@ -1,8 +1,19 @@
 #!/bin/sh
 
+# Required for opening menu with the Super key
 xcape -e 'Super_L=Alt_L|F1'
+# French keyboard layout
 setxkbmap fr
+# Adjust screen brightness on laptop
 xbacklight -set 50
+# Define ENV variable
 [ -f $HOME/.config/shell/env-variable.sh ] && source $HOME/.config/shell/env-variable.sh
+# Daemon managing keyboard shortcuts
 sxhkd &
+# Screen-locking daemon
+xss-lock xsecurelock &
+# Required for bluetooth media control to work
+mpris-proxy &
+# Required to auto-switch to bluetooth headset when connected
+pactl load-module module-switch-on-connect
 
