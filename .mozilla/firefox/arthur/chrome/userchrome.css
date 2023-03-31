@@ -1,0 +1,40 @@
+:root {
+  --navbarWidth     : 40vw;
+}
+
+.titlebar-buttonbox-container,
+.titlebar-spacer,
+#alltabs-button,
+#new-tab-button,
+#back-button,
+#forward-button,
+#tracking-protection-icon-container { display: none !important; }
+
+#nav-bar, #TabsToolbar {
+	color: var(--chrome-color) !important;
+	background-color: var(--chrome-background-color) !important;
+}
+
+#TabsToolbar {
+  margin-left : var(--navbarWidth) !important;
+}
+
+#nav-bar {
+  margin-right: calc(100vw - var(--navbarWidth)) !important;
+}
+
+:root[uidensity="compact"] #nav-bar {
+  margin-top  : -37px !important;
+  height      : 37px !important;
+}
+
+:root:not([uidensity="compact"]):not([uidensity="touch"]) #nav-bar {
+  margin-top  : -44px !important;
+  height      : 44px !important;
+}
+
+:root[uidensity="touch"] #nav-bar {
+  margin-top  : -49px !important;
+  height      : 49px !important;
+}
+
