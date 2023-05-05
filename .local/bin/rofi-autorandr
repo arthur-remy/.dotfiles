@@ -1,4 +1,4 @@
 #!/bin/sh
 
-autorandr --load $(autorandr --detected | rofi -dmenu -p )
+autorandr --load $(autorandr --detected | rofi -dmenu -p 󰍹)
 

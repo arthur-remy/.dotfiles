@@ -17,7 +17,7 @@ configuration {
 	kb-mode-complete: "";
 	kb-accept-entry: "Return"; 
 	kb-remove-to-eol: "";
-	display-combi: "";
+	display-combi: "";
 	display-run: "";
     close-on-delete: false;
 

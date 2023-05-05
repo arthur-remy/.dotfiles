@@ -19,7 +19,10 @@ syntax region markdownH6 matchgroup=markdownH6Delimiter start="#######\@!" end="
 
 " Requires a nerdfont
 syn match inProgress "\s*- \[ ] .*$" contains=inProgressMark
-syn match inProgressMark "- \[ ]" conceal cchar=
+syn match inProgressMark "- \[ ]" conceal cchar=󰄱
 syn match itemComplete "\s*- \[x] .*$" contains=itemCompleteMark
-syn match itemCompleteMark "- \[x]" conceal cchar=
+syn match itemCompleteMark "- \[x]" conceal cchar=󰄲
+
+" highlight link itemComplete Comment
+" Not working
 
