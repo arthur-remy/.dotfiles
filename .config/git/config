@@ -11,4 +11,6 @@
 	s = status
 [status]
 	showUntrackedFiles = no
+[push]
+	autoSetupRemote = true
 
