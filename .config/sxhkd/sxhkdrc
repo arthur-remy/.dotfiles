@@ -45,7 +45,7 @@ super + b
 
 # Connect to headphones
 super + shift + b
-	bluetoothctl power on; rfkill unblock bluetooth; bluetoothctl connect D4:68:AA:DB:09:D0
+	bluetoothctl power on; rfkill unblock bluetooth; bluetoothctl connect AC:C9:06:3A:71:6A
 
 ### WINDOW MANAGEMENT ###
 
