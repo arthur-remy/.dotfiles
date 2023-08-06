@@ -100,9 +100,6 @@ super + {_, shift +} u
 super + {_, shift +} f
 	{run-or-raise Thunar.Thunar, } thunar
 
-control + alt + w
-	mailspring & slack & google-calendar-nativefier &
-
 super + n
 	fd -H -t f . $HOME/Notes | fzfmenu | xargs --no-run-if-empty -d '\n' gio open
 
