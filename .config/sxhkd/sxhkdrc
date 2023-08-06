@@ -112,3 +112,6 @@ super + i
 super + o
 	fd -H -t f . $HOME | fzfmenu --with-nth -1 -d / | xargs --no-run-if-empty -d '\n' gio open
 
+super + shift + s
+	scrcpy
+
