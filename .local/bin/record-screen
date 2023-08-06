@@ -4,7 +4,7 @@
 
 SCREENSHOT_PATH="$HOME/Pictures/Screenshots/"
 TIMESTAMP=$(date +"%Y-%m-%d-%T")
-fpath="$SCREENSHOT_PATH$TIMESTAMP-recording.mp4"
+fpath="$SCREENSHOT_PATH$TIMESTAMP-recording"
 
 echo $fpath
 
@@ -17,16 +17,16 @@ else
     read -r X Y W H < <(echo $slop)
 
     # only start recording if we give a width (e.g we press escape to get out of slop - don't record)
-    if [ ${#W} -gt 0 ];
-		then
-			notify-send 'Started Recording!' --icon=dialog-information
-      
-			
-			# records without audio input
-			# for audio add "-f alsa -i pulse" to the line below (at the end before \, without "")
-			ffmpeg -f x11grab -s "$W"x"$H" -framerate 60  -thread_queue_size 512  -i $DISPLAY.0+$X,$Y \
-			-vcodec libx264 -qp 18 -preset ultrafast \
-			$fpath
+    if [ ${#W} -gt 0 ]; then
+		ffmpeg_command="ffmpeg -f x11grab -s "$W"x"$H" -i $DISPLAY.0+$X,$Y"
+
+		notify-send 'Started Recording!' --icon=dialog-information
+	
+		if [ $1 == '--audio' ]; then
+			$ffmpeg_command -f alsa -i pulse $fpath.mkv
+		else
+			$ffmpeg_command $fpath.mp4
+		fi
     fi
 fi
 
