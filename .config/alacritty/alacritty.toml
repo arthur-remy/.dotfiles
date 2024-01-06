@@ -1,0 +1,17 @@
+import = ["~/.config/alacritty/themes/nord.toml"]
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 10
+
+[keyboard]
+bindings = [
+	{ key = "Equals", mods = "Control", action = "ResetFontSize" },
+	{ key = "Plus", mods = "Control|Shift", action = "IncreaseFontSize"},
+]
+
+[shell]
+program = "/bin/zsh"
+
