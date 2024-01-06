@@ -115,3 +115,6 @@ super + o
 super + shift + s
 	scrcpy
 
+super + asterisk
+	rofi-bookmarks
+
