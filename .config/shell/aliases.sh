@@ -24,4 +24,7 @@ alias h='cht.sh'
 alias c='cd "$(fd -H -t d . | fzf)"'
 alias pac-history='sudo grep "\[ALPM\]" /var/log/pacman.log |  grep -E "installed|removed|upgraded" | less'
 alias copydir='pwd | xclip -selection clipboard'
+alias py='python3'
+alias f='ranger'
+alias rmm='rm -f'
 
