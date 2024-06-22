@@ -11,4 +11,6 @@ noto-fonts-emoji
 scrot
 xdotool
 unclutter
+zathura
+zathura-pdf-mupdf
 
