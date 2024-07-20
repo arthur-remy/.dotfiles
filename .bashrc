@@ -1,4 +1,4 @@
-source $HOME/.config/bash_aliases.sh
+source $HOME/.config/shell/aliases.sh
 
 # Include hidden file in search results
 export FZF_DEFAULT_COMMAND='fd . -H'
