@@ -85,7 +85,7 @@ Print
 control + Print
 	$HOME/.local/bin/screenshot --edit
 
-Home
+super + Print
 	$HOME/.local/bin/record-screen
 
 ### LAUNCH APPS ###
@@ -117,4 +117,7 @@ super + shift + s
 
 super + asterisk
 	rofi-bookmarks
+
+super + Home
+	xcolor | xclip -selection clipboard
 
