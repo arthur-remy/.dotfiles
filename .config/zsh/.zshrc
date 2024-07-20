@@ -20,6 +20,11 @@ HISTSIZE=10000000
 SAVEHIST=10000000
 HISTFILE="$XDG_CACHE_HOME/zsh/history"
 
+# Edit line in vim with ctrl-e:
+autoload edit-command-line; zle -N edit-command-line
+bindkey '^e' edit-command-line
+bindkey -M vicmd '^e' edit-command-line
+
 safe_source /usr/share/fzf/key-bindings.zsh
 
 bindkey '^ ' autosuggest-accept
