@@ -1,8 +1,9 @@
-[Web-browser]
+[Default Applications]
+
+# Web
 x-scheme-handler/http=firefox.desktop;
 x-scheme-handler/https=firefox.desktop;
 x-scheme-handler/chrome=firefox.desktop;
-text/html=firefox.desktop;
 application/x-extension-htm=firefox.desktop;
 application/x-extension-html=firefox.desktop;
 application/x-extension-shtml=firefox.desktop;
@@ -10,8 +11,18 @@ application/xhtml+xml=firefox.desktop;
 application/x-extension-xhtml=firefox.desktop;
 application/x-extension-xht=firefox.desktop;
 
-[Default Applications]
-application/pdf=xreader.desktop
+# Web
 text/plain=nvim.desktop;
-image/jpeg=feh.desktop;
+text/csv=nvim.desktop;vim.desktop;libreoffice-calc.desktop;
+text/html=firefox.desktop;
+application/pdf=org.pwmt.zathura-pdf-mupdf.desktop
+
+# Video
+video/x-matroska=mpv.desktop;vlc.desktop;
+video/mp4=mpv.desktop;vlc.desktop;
+
+# Image
+image/jpeg=org.xfce.ristretto.desktop;
+image/png=org.xfce.ristretto.desktop;
+image/svg+xml=org.xfce.ristretto.desktop;
 
